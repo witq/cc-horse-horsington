@@ -1,25 +1,19 @@
-<header ng-repeat-start="user in users.data">
-    id
-    username
-    email
-    gender
-    <!--<tr>-->
-        <!--<td>id</td>-->
-        <!--<td>username</td>-->
-        <!--<td>email</td>-->
-        <!--<td>gender</td>-->
-    <!--</tr>-->
-</header>
-<div class="body">
-    {{user.id}}
-    {{user.username}}
-    {{user.email}}
-    {{user.gender}}
-    <!--<tr>-->
-        <!--<td>{{ user.id }}</td>-->
-        <!--<td>{{ user.username }}</td>-->
-        <!--<td>{{ user.email }}</td>-->
-        <!--<td>{{ user.gender }}</td>-->
-    <!--</tr>-->
-</div>
-<footer ng-repeat-end></footer>
+<table>
+<thead>
+    <tr>
+        <td>id</td>
+        <td>username</td>
+        <td>email</td>
+        <td>gender</td>
+    </tr>
+</thead>
+<tbody ng-repeat='user in users'>
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.gender }}</td>
+    </tr>
+</tbody>
+<tfoot></tfoot>
+</table>
