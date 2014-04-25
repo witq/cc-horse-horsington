@@ -16,7 +16,11 @@ angular
       })
       .when('/projects', {
         templateUrl: 'views/projects.html',
-        controller: 'ProjectsCtrl'
+        controller: 'ProjectsListCtrl'
+      })
+      .when('/projects/:id', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectsShowCtrl'
       })
       .when('/issues', {
         templateUrl: 'views/issues.html',
