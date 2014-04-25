@@ -1,18 +1,23 @@
 <table class="table">
     <thead>
-    <tr>
-    <th>
-    Lp
-    </th>
-    </tr>
+        <tr>
+            <th>
+                Lp
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
     <tr ng-repeat="issue in issues.data">
      <td>{{issue.id}}</td>
+     <td><a ng-href="#/issue/{{issue.id}}">{{issue.title}}</a></td>
+     <td>{{issue.status}}</td>
     </tr>
 </table>
-<ul>
-    <li ng-repeat="issue in issues.data">
-     {{issue.title}}
-    </li>
-</ul>
+
 
 <pre>{{issues | json}}</pre>

@@ -26,6 +26,10 @@ angular
         templateUrl: 'views/projects.html',
         controller: 'ProjectsCtrl'
       })
+      .when('/issue/:id', {
+        templateUrl: 'views/issue.html',
+        controller: 'IssueCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -61,7 +65,17 @@ angular
             'itemCount': 1110
         }
     };
-
+        $httpBackend.when('GET', /issues\/[0-9]+/).respond(function (method, url) {
+            var urlSegments = url.split('/'),
+                id = parseInt(urlSegments[2]),
+                response;
+            issues.data.forEach(function (issue) {
+                if (issue.id === id) {
+                    response = issue;
+                }
+            });
+            return [200, response, {}];
+        });
     $httpBackend.when('GET', '/issues').respond(issues);
     $httpBackend.when('GET', /.*/).passThrough();
 }
