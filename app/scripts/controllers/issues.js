@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('horseApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('IssuesCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

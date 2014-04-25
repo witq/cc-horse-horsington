@@ -1,0 +1,47 @@
+<div class="row clearfix" ng-repeat="project in data.data" style="border-bottom: black 2px solid; padding-bottom: 10px; padding-top: 10px">
+    <div class="col-md-6 column ui-sortable">
+        <div class="row clearfix">
+            Id:
+            <div class="span3 pull-right btn">
+                {{ project.id }}
+            </div>
+        </div>
+        <div class="row clearfix">
+            Key:
+            <div class="span3 pull-right btn">
+                {{ project.key }}
+            </div>
+        </div>
+        <div class="row clearfix">
+            Name:
+            <div class="span3 pull-right btn">
+                {{ project.name }}
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            Leader:
+            <div class="span3 pull-right btn">
+                {{ project.leader }}
+            </div>
+        </div>
+        <div class="row clearfix">
+            Url:
+            <div class="span3 pull-right btn">
+                {{ project.url }}
+            </div>
+        </div>
+        <div class="row clearfix">
+            Created at:
+            <div class="span3 pull-right btn">
+                {{ project.created_at }}
+            </div>
+        </div>
+        <div class="row clearfix">
+            Updated at:
+            <div class="span3 pull-right btn">
+                {{ project.updated_at }}
+            </div>
+        </div>
+    </div>
+</div>
