@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+    <tr>
+    <th>
+    Lp
+    </th>
+    </tr>
+    <tr ng-repeat="issue in issues.data">
+     <td>{{issue.id}}</td>
+    </tr>
+</table>
+<ul>
+    <li ng-repeat="issue in issues.data">
+     {{issue.title}}
+    </li>
+</ul>
+
+<pre>{{issues | json}}</pre>
